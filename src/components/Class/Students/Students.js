@@ -9,8 +9,11 @@ const students = (props) => {
                 key={student.id}
                 id={student.id}
                 name={student.name}
-                score={student.score} 
-                clicked={() => props.handleActiveId(student.id)}/>
+                score={student.score}
+                activeId={props.activeId} 
+                clicked={() => props.handleActiveId(student.id)}
+                handlePlusScore={props.handlePlusScore}
+                handleMinusScore={props.handleMinusScore} />
     }) : null;
 
     return (
