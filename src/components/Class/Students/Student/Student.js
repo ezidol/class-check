@@ -1,5 +1,5 @@
 import React from 'react';
-import Aux from '../../../../hoc/Aux';
+import Aux from '../../../../hoc/Auxs';
 import WithClass from '../../../../hoc/withClass';
 import classes from './Student.css';
 
