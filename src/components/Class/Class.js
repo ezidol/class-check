@@ -8,19 +8,10 @@ class Class extends Component {
         studentList: [
             {
                 id: 1,
-                name: "Jack",
-                score: 30
+                name: "이름",
+                score: 0
             },
-            {
-                id: 2,
-                name: "Paul",
-                score: 50
-            },
-            {
-                id: 3,
-                name: "Alex",
-                score: 60
-            }
+    
         ],
         activeId: 1
 
@@ -50,7 +41,7 @@ class Class extends Component {
                 {
                     id: this.state.studentList.length +1,
                     name: '이름',
-                    score: '점수'
+                    score: 0
                 }
             ],
             activeId: this.state.studentList.length +1

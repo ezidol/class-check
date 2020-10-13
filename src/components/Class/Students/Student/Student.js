@@ -7,10 +7,10 @@ const student = (props) => {
     console.log(props.id);
     return (
         <Aux>
-            <div
+            <div className={classes.Card}
             onClick={props.clicked}>
-                <h3>{props.name}</h3>
-                <h3>{props.score}</h3>
+                <h2>{props.name}</h2>
+                <h2>{props.score}</h2>
                 {props.id === props.activeId ? <div className="button">
                     <button onClick={props.handlePlusScore}>+</button>
                     <button onClick={props.handleMinusScore}>-</button>
