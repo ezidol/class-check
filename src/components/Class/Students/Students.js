@@ -1,5 +1,6 @@
 import React from 'react';
 import Student from './Student/Student';
+import './Students.css';
 
 const students = (props) => {
     
@@ -17,7 +18,7 @@ const students = (props) => {
     }) : null;
 
     return (
-        <div className="stuents">
+        <div className="Students">
             {student_list}
         </div>
     )

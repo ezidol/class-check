@@ -1,17 +1,17 @@
 import React from 'react';
 import Aux from '../../../../hoc/Auxs';
-import WithClass from '../../../../hoc/withClass';
-import classes from './Student.css';
+import './Student.css';
 
 const student = (props) => {
     console.log(props.id);
     return (
         <Aux>
-            <div className={classes.Card}
+            <div className="Student"
             onClick={props.clicked}>
-                <h2>{props.name}</h2>
-                <h2>{props.score}</h2>
-                {props.id === props.activeId ? <div className="button">
+                <div className="Name"><h2>{props.name}</h2></div>
+                <div className="Score"><h2>{props.score}</h2> </div>
+                
+                {props.id === props.activeId ? <div className="Button">
                     <button onClick={props.handlePlusScore}>+</button>
                     <button onClick={props.handleMinusScore}>-</button>
                 </div> : null}
@@ -23,4 +23,4 @@ const student = (props) => {
     )
 }
 
-export default WithClass(student, classes.Student);
+export default student;

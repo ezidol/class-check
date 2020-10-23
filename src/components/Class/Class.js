@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import Students from './Students/Students';
 import Note from './Note/Note';
-
+import Header from './Header/Header';
+import './Class.css';
 
 class Class extends Component {
     state = {
@@ -86,17 +87,25 @@ class Class extends Component {
         console.log(activeNote)
         return(
             <div className="Class">
-                <Students
-                studentList={this.state.studentList}
-                handleActiveId={this.handleActiveId}
-                handlePlusScore={this.handlePlusScore}
-                handleMinusScore={this.handleMinusScore}
-                activeId={this.state.activeId} />
-
-                {this.state.studentList.length === 0 ? null : <Note activeNote={activeNote} handleEditNote={this.handleEditNote}/>}
+                <div className="Header">
+                    <Header 
+                    added={()=>this.handleAddStudent()} 
+                    deleted={()=>this.handleDeleteStudent(this.state.activeId)} 
+                    />
+                </div>
+                <div className="StudentList">
+                    <Students
+                    studentList={this.state.studentList}
+                    handleActiveId={this.handleActiveId}
+                    handlePlusScore={this.handlePlusScore}
+                    handleMinusScore={this.handleMinusScore}
+                    activeId={this.state.activeId} />
+                </div>           
+                <div className="Note">
+                    {this.state.studentList.length === 0 ? null : <Note activeNote={activeNote} handleEditNote={this.handleEditNote}/>}
+                </div>
                 
-                <button onClick={()=>this.handleAddStudent()}>add</button>
-                <button onClick={()=>this.handleDeleteStudent(this.state.activeId)}>delete</button>
+                
             </div>
             
         )

@@ -1,4 +1,44 @@
 .Student {
-    color: red;
-    
+    display: flex;
+    margin: 10px
+}
+.Student:hover {
+    background-color: orange;
+}
+.Name {
+    width: 100px;
+    background-color: #82b74b;
+    padding:0.2em;
+    line-height: 0.5em;
+    border-radius:0.5em;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    text-align: center;
+}
+
+.Score {
+    background-color:#feb236;
+    width:55px;
+    height:55px;
+    border-radius:75px;
+    text-align:center;
+    line-height:0.5em;
+    margin-left: 5px;
+}
+
+
+.Student button {
+    background-color:black;
+    font-weight: bold;
+    color: white;
+    width:20px;
+    height:20px;
+    border-radius:75px;
+    text-align:center;
+    line-height:0.5em;
+    margin-left: 5px;
+    border: 0;
+    outline: 0;
+    margin: 16px 0px;
+    margin-left: 5px;
 }
