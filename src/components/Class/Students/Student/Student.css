@@ -1,10 +1,20 @@
 .Student {
     display: flex;
-    margin: 10px
+    margin: 10px;
+    cursor: pointer;
+    width: 227px;
 }
 .Student:hover {
-    background-color: orange;
+    background-color: #fff8cd;
 }
+
+.Student:active {
+    background-color: #ffe05d;
+}
+.active {
+    background-color: #ffe05d;
+}
+
 .Name {
     width: 100px;
     background-color: #82b74b;
@@ -22,10 +32,13 @@
     height:55px;
     border-radius:75px;
     text-align:center;
-    line-height:0.5em;
+    line-height:0.8em;
     margin-left: 5px;
 }
 
+.Student .Button {
+    margin-right: 10px;
+}
 
 .Student button {
     background-color:black;

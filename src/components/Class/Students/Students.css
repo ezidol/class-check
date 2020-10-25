@@ -1,0 +1,13 @@
+.Students {
+    margin-right: 20px;
+    
+}
+.list {
+    display: flex;
+}
+.list1 {
+    flex:1;
+}
+.list2 {
+    flex:2;
+}

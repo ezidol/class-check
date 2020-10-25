@@ -4,9 +4,10 @@ import './Student.css';
 
 const student = (props) => {
     console.log(props.id);
+    
     return (
         <Aux>
-            <div className="Student"
+            <div className={props.id === props.activeId ? "Student active" : "Student"}
             onClick={props.clicked}>
                 <div className="Name"><h2>{props.name}</h2></div>
                 <div className="Score"><h2>{props.score}</h2> </div>

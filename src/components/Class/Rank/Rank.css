@@ -1,0 +1,17 @@
+.rank {
+    margin:0px 20px 0px 20px;
+    font-size: 20px;
+}
+
+table, th, td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}

@@ -2,8 +2,10 @@ import React, {Component} from 'react';
 import Students from './Students/Students';
 import Note from './Note/Note';
 import Header from './Header/Header';
+import Rank from './Rank/Rank';
 import './Class.css';
 
+let id = 1
 class Class extends Component {
     state = {
         studentList: [
@@ -12,10 +14,17 @@ class Class extends Component {
                 name: "이름",
                 score: 0
             },
+            
     
         ],
-        activeId: 1
+        activeId: id,
+        rankShow: false
 
+    }
+    toggleRankShow = () => {
+        this.setState({
+            rankShow: !this.state.rankShow
+        })
     }
 
     handleActiveId = (id) => {
@@ -36,16 +45,17 @@ class Class extends Component {
 
     handleAddStudent = () => {
         const studentList = [...this.state.studentList];
+        id++
         this.setState({
             studentList: [
                 ...studentList,
                 {
-                    id: this.state.studentList.length +1,
+                    id: id,
                     name: '이름',
                     score: 0
                 }
             ],
-            activeId: this.state.studentList.length +1
+            activeId: id
         })
     }
 
@@ -81,6 +91,7 @@ class Class extends Component {
     }
 
     render() {
+        console.log(this.state);
         const activeNote = this.state.studentList.find(student => 
         student.id === this.state.activeId    
         )
@@ -91,24 +102,42 @@ class Class extends Component {
                     <Header 
                     added={()=>this.handleAddStudent()} 
                     deleted={()=>this.handleDeleteStudent(this.state.activeId)} 
+                    rankShow={this.state.rankShow}
+                    toggleRankShow={this.toggleRankShow}
+                    studentList={this.state.studentList} 
                     />
                 </div>
-                <div className="StudentList">
+                <div className="main">
                     <Students
                     studentList={this.state.studentList}
                     handleActiveId={this.handleActiveId}
                     handlePlusScore={this.handlePlusScore}
                     handleMinusScore={this.handleMinusScore}
                     activeId={this.state.activeId} />
-                </div>           
-                <div className="Note">
-                    {this.state.studentList.length === 0 ? null : <Note activeNote={activeNote} handleEditNote={this.handleEditNote}/>}
+                    <div className="right-main">
+                        <div className="note-view">
+                            {this.state.studentList.length === 0 ? 
+                            null : <Note 
+                            activeNote={activeNote} 
+                            handleEditNote={this.handleEditNote}
+                            
+                             />}
+                        </div>
+                        <div className="rank-view">
+                            {this.state.rankShow ? 
+                            <Rank 
+                            studentList={this.state.studentList} /> :
+                            null}
+                        </div>
+                        
+                    </div>           
+                        
                 </div>
                 
                 
             </div>
-            
         )
+            
     }
 }
 

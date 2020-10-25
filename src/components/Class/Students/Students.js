@@ -19,7 +19,9 @@ const students = (props) => {
 
     return (
         <div className="Students">
-            {student_list}
+            {student_list.length > 10 ? <div className="list"><div className="list1">{student_list.slice(0,10)}</div><div className="list2">{student_list.slice(10,20)}</div></div>
+            : student_list}
+            
         </div>
     )
 }
