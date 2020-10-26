@@ -11,7 +11,7 @@ class Class extends Component {
         studentList: [
             {
                 id: 1,
-                name: "이름",
+                name: "",
                 score: 0
             },
             
@@ -37,7 +37,7 @@ class Class extends Component {
         const studentList = [...this.state.studentList];
         const activeStudent = studentList.find(student => 
             student.id === this.state.activeId);
-        activeStudent[type] = event.target.value;
+        activeStudent[type] = type === "score" ? Number(event.target.value) : event.target.value;
         this.setState({
             studentList
         })
@@ -51,7 +51,7 @@ class Class extends Component {
                 ...studentList,
                 {
                     id: id,
-                    name: '이름',
+                    name: '',
                     score: 0
                 }
             ],
