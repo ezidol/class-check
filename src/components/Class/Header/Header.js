@@ -1,15 +1,23 @@
 import React from 'react';
 import './Header.css';
+import Timer from '../Timer/Timer';
 
 const Header = (props) => {
     return (
         <div className="header">
             <div className="view-header">
                 <p>동구로초등학교 6-2</p>
+                {props.timerShow ? <Timer /> : null}
                 <div>
                     <div className="button">
-                        <span>출석: {props.studentList.length}명</span>
+                        <span className="onoff">출석: {props.studentList.length}명</span>
+                        <span className="timer">
+                            <button onClick={props.toggleTimerShow}>
+                                {props.timerShow ? <p>타이머 숨기기</p> : <p>타이머</p>}
+                            </button>
+                        </span>
                         <span className="rank">
+                            
                             <button onClick={props.toggleRankShow}>
                                 {props.rankShow ? <p>순위숨기기</p> : <p>순위보기</p>}
                             </button>

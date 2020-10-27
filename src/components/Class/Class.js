@@ -18,9 +18,17 @@ class Class extends Component {
     
         ],
         activeId: id,
-        rankShow: false
+        rankShow: false,
+        timerShow: false
 
     }
+
+    toggleTimerShow = () => {
+        this.setState({
+            timerShow: !this.state.timerShow
+        })
+    }
+
     toggleRankShow = () => {
         this.setState({
             rankShow: !this.state.rankShow
@@ -104,6 +112,8 @@ class Class extends Component {
                     deleted={()=>this.handleDeleteStudent(this.state.activeId)} 
                     rankShow={this.state.rankShow}
                     toggleRankShow={this.toggleRankShow}
+                    toggleTimerShow={this.toggleTimerShow}
+                    timerShow={this.state.timerShow}
                     studentList={this.state.studentList} 
                     />
                 </div>
