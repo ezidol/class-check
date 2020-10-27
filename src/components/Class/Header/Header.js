@@ -10,7 +10,7 @@ const Header = (props) => {
                 {props.timerShow ? <Timer /> : null}
                 <div>
                     <div className="button">
-                        <span className="onoff">출석: {props.studentList.length}명</span>
+                        {/* <span className="onoff">출석: {props.studentList.length}명</span> */}
                         <span className="timer">
                             <button onClick={props.toggleTimerShow}>
                                 {props.timerShow ? <p>타이머 숨기기</p> : <p>타이머</p>}
