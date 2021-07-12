@@ -6,7 +6,7 @@ const Header = (props) => {
     return (
         <div className="header">
             <div className="view-header">
-                <p>동구로초등학교 6-2</p>
+                <p>신나는 수업시간</p>
                 {props.timerShow ? <Timer /> : null}
                 <div>
                     <div className="button">
