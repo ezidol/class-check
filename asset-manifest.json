@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ezidol/class-check/static/css/main.aed24e3e.chunk.css",
+    "main.js": "/ezidol/class-check/static/js/main.8a162ec4.chunk.js",
+    "main.js.map": "/ezidol/class-check/static/js/main.8a162ec4.chunk.js.map",
+    "runtime-main.js": "/ezidol/class-check/static/js/runtime-main.5fc66402.js",
+    "runtime-main.js.map": "/ezidol/class-check/static/js/runtime-main.5fc66402.js.map",
+    "static/js/2.85d47b54.chunk.js": "/ezidol/class-check/static/js/2.85d47b54.chunk.js",
+    "static/js/2.85d47b54.chunk.js.map": "/ezidol/class-check/static/js/2.85d47b54.chunk.js.map",
+    "index.html": "/ezidol/class-check/index.html",
+    "precache-manifest.4255fa3a1e70a09fa038a54c60d92c3d.js": "/ezidol/class-check/precache-manifest.4255fa3a1e70a09fa038a54c60d92c3d.js",
+    "service-worker.js": "/ezidol/class-check/service-worker.js",
+    "static/css/main.aed24e3e.chunk.css.map": "/ezidol/class-check/static/css/main.aed24e3e.chunk.css.map",
+    "static/js/2.85d47b54.chunk.js.LICENSE.txt": "/ezidol/class-check/static/js/2.85d47b54.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5fc66402.js",
+    "static/js/2.85d47b54.chunk.js",
+    "static/css/main.aed24e3e.chunk.css",
+    "static/js/main.8a162ec4.chunk.js"
+  ]
+}
