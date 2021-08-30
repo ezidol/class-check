@@ -52,6 +52,9 @@ class Class extends Component {
     }
 
     handleAddStudent = () => {
+        if (this.state.studentList.length == 30) {
+            return 0;
+        }
         const studentList = [...this.state.studentList];
         id++
         this.setState({

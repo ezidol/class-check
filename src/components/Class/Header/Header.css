@@ -6,10 +6,35 @@
     justify-content: space-between;
     padding-bottom: 0px;
 }
-.view-header > p {
+.view-header > .title-view {
     font-weight: bold;
     font-size: 2em;
     margin: 5px;
+}
+.view-header > .title-view > .input-button {
+    margin-left: 5px;
+}
+.view-header > .title-view input {
+    width: 400px;
+    height: 30px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-indent: 10px;
+}
+.view-header > .title-view > .input-button > button {    
+    background-color: #3e4444;
+    font-weight: bold;
+    color: white;
+    width:50px;
+    height:30px;
+    border-radius:75px;
+    text-align:center;
+    line-height:0.3em;    
+    border: 0;
+    outline: 0;
+    margin: 16px 5px 0px 5px;
+    cursor: pointer;
+    
 }
 
 .view-header .control button {

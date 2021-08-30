@@ -1,12 +1,41 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Header.css';
 import Timer from '../Timer/Timer';
 
 const Header = (props) => {
+    const [title, setTitle] = useState('');
+    const [input, setInput] = useState(true);
+    const [inputButtonName, setInputButtonName] = useState('입력');
+    let titleComponent = '';
+    const handleEditTitle = (e) => {
+        setTitle(e.target.value);
+    }
+    const handleInputButton = () => {
+        if (input) {
+            setInput(false);
+            setInputButtonName('수정');
+        } else {
+            setInput(true);
+            setInputButtonName('입력');
+        }
+        
+    }
+    if (input) {
+        titleComponent = <input type="text" placeholder="주제를 적으세요" value={title} onChange={(e) => handleEditTitle(e)} />
+    } else {
+        titleComponent = title;
+    }
+
     return (
         <div className="header">
             <div className="view-header">
-                <p>신나는 수업시간</p>
+                <div className="title-view">
+                    {titleComponent}
+                    <span className="input-button">
+                        <button onClick={() => handleInputButton()}>{inputButtonName}</button>
+                    </span>
+                    
+                </div>
                 {props.timerShow ? <Timer /> : null}
                 <div>
                     <div className="button">
